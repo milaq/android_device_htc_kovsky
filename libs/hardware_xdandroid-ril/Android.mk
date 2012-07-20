@@ -17,8 +17,8 @@ endif
 
 intermediates:= $(local-intermediates-dir)
 GEN := $(intermediates)/gitver.h
-$(GEN): PRIVATE_CUSTOM_TOOL = git --git-dir=$(<D) log -1 --format=format:'"%h %ci"' > $@
-$(GEN):	$(LOCAL_PATH)/.git/index
+#$(GEN): PRIVATE_CUSTOM_TOOL = git --git-dir=$(<D) log -1 --format=format:'"%h %ci"' > $@
+$(GEN):
 	$(transform-generated-source)
 
 LOCAL_GENERATED_SOURCES += $(GEN)
