@@ -103,7 +103,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # appropriately. If this property is not defined, the default value is 160 dpi. 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
-	ro.sf.hwrotation=180
+    ro.sf.hwrotation=180
 
 # Default network type
 # 0 => WCDMA Preferred.

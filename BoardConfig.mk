@@ -68,6 +68,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/htc/kovsky/egl.cfg
 
+# Recovery
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/htc/kovsky/recovery/recovery_ui.c
+BOARD_XHDPI_RECOVERY := true
+BOARD_USE_CUSTOM_FONT := true
+
 # RPC
 BOARD_USES_QCOM_LIBRPC := false
 
