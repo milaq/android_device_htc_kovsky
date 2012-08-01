@@ -34,6 +34,7 @@ TARGET_ARCH_VARIANT := armv6j
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
+
 BOARD_HAS_FLIPPED_SCREEN := true
 
 # Audio
@@ -71,7 +72,7 @@ BOARD_EGL_CFG := device/htc/kovsky/egl.cfg
 BOARD_USES_QCOM_LIBRPC := false
 
 # GPS
-BOARD_VENDOR_XDANDROID_GPS_HARDWARE := true
+BOARD_VENDOR_XDANDROID_GPS_HARDWARE := xdandroid
 BOARD_GPS_LIBRARIES := gps.xdandroid
 
 # Ota updates
@@ -87,6 +88,8 @@ BUILD_PV_VIDEO_ENCODERS := 1
 
 # Misc
 JS_ENGINE := v8
+
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=\$(TOP)/device/htc/kovsky/prelink-linux-arm-kovsky.map
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
