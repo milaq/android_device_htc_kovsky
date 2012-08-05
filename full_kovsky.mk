@@ -26,18 +26,18 @@ PRODUCT_LOCALES += hdpi
 PRODUCT_PACKAGES += \
     VoiceDialer \
     sensors.msm7k \
-	microp-keypad.kcm \
-	vold.fstab \
-	libOmxCore \
-	gps.xdandroid \
-	copybit.msm7k \
-	gralloc.kovsky \
-	lights.msm7k \
-	libhtc_acoustic \
-	libhtcgeneric-ril \
-	libcamera \
-	wl1251.ko \
-	wl1251_sdio.ko
+    microp-keypad.kcm \
+    vold.fstab \
+    libOmxCore \
+    gps.xdandroid \
+    copybit.msm7k \
+    gralloc.kovsky \
+    lights.msm7k \
+    libhtc_acoustic \
+    libhtcgeneric-ril \
+    libcamera \
+    wl1251.ko \
+    wl1251_sdio.ko
 
 PRODUCT_COPY_FILES ?= 
 
