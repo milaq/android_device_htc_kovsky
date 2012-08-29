@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
     microp-keypad.kcm \
     vold.fstab \
     libOmxCore \
-    gps.xdandroid \
+    gps.kovsky \
     copybit.msm7k \
     gralloc.kovsky \
     lights.msm7k \
