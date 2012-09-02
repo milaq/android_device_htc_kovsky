@@ -35,9 +35,9 @@ PRODUCT_PACKAGES += \
     lights.msm7k \
     libhtc_acoustic \
     libhtcgeneric-ril \
-    libcamera \
     wl1251.ko \
     wl1251_sdio.ko
+#    libcamera \
 
 PRODUCT_COPY_FILES ?= 
 
