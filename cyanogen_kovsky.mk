@@ -12,9 +12,9 @@ $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 #
 
 PRODUCT_NAME := cyanogen_kovsky
-PRODUCT_BRAND := htc_wwe
+PRODUCT_BRAND := Sony Ericsson
 PRODUCT_DEVICE := kovsky
-PRODUCT_MODEL := Xperia X1
+PRODUCT_MODEL := XPERIA X1
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_ID=GRI40 BUILD_FINGERPRINT=google/passion/passion:2.3.3/GRI40/102588:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.3 GRI40 102588 release-keys"
 
