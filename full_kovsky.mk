@@ -119,6 +119,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=65536
 
+# Increase default VM heap size to prevent certain apps from crashing
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapsize=32m
+
 # media configuration xml file
 PRODUCT_COPY_FILES += \
     device/htc/kovsky/media_profiles.xml:/system/etc/media_profiles.xml
