@@ -12,7 +12,7 @@ $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 #
 
 PRODUCT_NAME := cyanogen_kovsky
-PRODUCT_BRAND := SonyEricsson
+PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := kovsky
 PRODUCT_MODEL := XPERIA X1
 PRODUCT_MANUFACTURER := HTC
