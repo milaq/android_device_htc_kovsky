@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
     gps.kovsky \
     copybit.msm7k \
     gralloc.kovsky \
-    lights.msm7k \
+    lights.kovsky \
     libhtc_acoustic \
     libhtcgeneric-ril \
     wl1251.ko \
