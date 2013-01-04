@@ -88,6 +88,15 @@
          the blur effect where it isn't worth the performance hit. -->
     <bool name="config_sf_slowBlur">true</bool>
 
+    <!-- Allows CRT animations. -->
+    <bool name="config_animateScreenLights">false</bool>
+    
+    <!-- Allows the CRT animation when waking from suspend. -->
+    <bool name="config_enableScreenOnAnimation">false</bool>
+    
+    <!-- Allows the CRT animation when suspending. -->
+    <bool name="config_enableScreenOffAnimation">false</bool>
+
     <!-- The duration (in milliseconds) of a short animation. -->
     <integer name="config_shortAnimTime">100</integer>
 
