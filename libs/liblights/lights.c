@@ -63,6 +63,9 @@ char const*const AMBER_LED_FILE
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
+char const*const LCD_AUTO_FILE
+        = "/sys/module/leds_microp_htckovsky/parameters/auto_brightness";
+	
 char const*const RED_FREQ_FILE
         = "/sys/class/leds/red/device/grpfreq";
 
@@ -161,11 +164,13 @@ set_light_backlight(struct light_device_t* dev,
     int err = 0;
     int brightness = rgb_to_brightness(state);
     int use_sensor = 0;
-    if(state->brightnessMode==BRIGHTNESS_MODE_SENSOR)
-      use_sensor = 1;
     pthread_mutex_lock(&g_lock);
+    if(state->brightnessMode==BRIGHTNESS_MODE_SENSOR)
+      err = write_int(LCD_AUTO_FILE, 1);
+    else
+      err = write_int(LCD_AUTO_FILE, 0);
     g_backlight = brightness;
-    err = write_int(LCD_FILE, brightness | (use_sensor << 16));
+    err = write_int(LCD_FILE, brightness);
     if (g_haveTrackballLight) {
         handle_trackball_light_locked(dev);
     }
