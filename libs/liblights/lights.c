@@ -160,12 +160,12 @@ set_light_backlight(struct light_device_t* dev,
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
-    int auto = 0;
+    int use_sensor = 0;
     if(state->brightnessMode==BRIGHTNESS_MODE_SENSOR)
-      auto = 1;
+      use_sensor = 1;
     pthread_mutex_lock(&g_lock);
     g_backlight = brightness;
-    err = write_int(LCD_FILE, brightness | (auto << 8));
+    err = write_int(LCD_FILE, brightness | (use_sensor << 16));
     if (g_haveTrackballLight) {
         handle_trackball_light_locked(dev);
     }
