@@ -65,7 +65,7 @@ char const*const LCD_FILE
 
 char const*const LCD_AUTO_FILE
         = "/sys/module/leds_microp_htckovsky/parameters/auto_brightness";
-	
+	   
 char const*const RED_FREQ_FILE
         = "/sys/class/leds/red/device/grpfreq";
 
@@ -165,11 +165,16 @@ set_light_backlight(struct light_device_t* dev,
     int brightness = rgb_to_brightness(state);
     int use_sensor = 0;
     pthread_mutex_lock(&g_lock);
-    if(state->brightnessMode==BRIGHTNESS_MODE_SENSOR)
-      err = write_int(LCD_AUTO_FILE, 1);
-    else
-      err = write_int(LCD_AUTO_FILE, 0);
+    if( brightness> 0xfe) brightness = 0xfe;
+    
     g_backlight = brightness;
+    
+    if(state->brightnessMode==BRIGHTNESS_MODE_SENSOR && brightness){
+      brightness = 0xff;
+    }else{
+      LOGD("set_light_backlight: Turning of backlight\n");
+    }
+    
     err = write_int(LCD_FILE, brightness);
     if (g_haveTrackballLight) {
         handle_trackball_light_locked(dev);
