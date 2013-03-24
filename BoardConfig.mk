@@ -51,7 +51,7 @@ BOARD_HAVE_BLUETOOTH := true
 # Kernel options
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE := fbcon=rotate:2 smd_rpcrouter.hot_boot=1 no_console_suspend
-TARGET_PREBUILT_KERNEL := device/htc/kovsky/prebuilt_kernel/kernel
+TARGET_PREBUILT_KERNEL := device/htc/kovsky/prebuilt/kernel
 LOCAL_KERNEL := device/htc/kovsky/kernel
 
 #libsurfaceflinger to avoid Draw Texture Extenstion
@@ -65,7 +65,7 @@ TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # OpenGL drivers config file path
-BOARD_EGL_CFG := device/htc/kovsky/egl.cfg
+BOARD_EGL_CFG := device/htc/kovsky/configs/egl.cfg
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/htc/kovsky/recovery/recovery_ui.c

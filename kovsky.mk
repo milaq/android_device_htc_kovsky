@@ -37,9 +37,6 @@ PRODUCT_PACKAGES += \
     libhtcgeneric-ril \
     wl1251.ko \
     wl1251_sdio.ko
-#    libcamera \
-
-PRODUCT_COPY_FILES ?= 
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -51,9 +48,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt stuff
 PRODUCT_COPY_FILES += \
-    device/htc/kovsky/configs/init.kovsky.rc:root/init.kovsky.rc \
-    device/htc/kovsky/configs/build.kovsky.prop:system/build.kovsky.prop \
-    device/htc/kovsky/configs/ueventd.kovsky.rc:root/ueventd.kovsky.rc \
+    device/htc/kovsky/init.kovsky.rc:root/init.kovsky.rc \
+    device/htc/kovsky/ueventd.kovsky.rc:root/ueventd.kovsky.rc \
     device/htc/kovsky/configs/vold.fstab:system/etc/vold.fstab \
     device/htc/kovsky/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
@@ -125,11 +121,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
-    device/htc/kovsky/media_profiles.xml:/system/etc/media_profiles.xml
+    device/htc/kovsky/configs/media_profiles.xml:/system/etc/media_profiles.xml
 
 # Kernel stuff
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/htc/kovsky/prebuilt_kernel/kernel
+	LOCAL_KERNEL := device/htc/kovsky/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
