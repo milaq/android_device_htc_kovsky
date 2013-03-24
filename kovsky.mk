@@ -142,6 +142,9 @@ $(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
+# goo.im stuff
+$(call inherit-product, device/htc/kovsky/goo.mk)
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_kovsky
 PRODUCT_DEVICE := kovsky
