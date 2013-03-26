@@ -34,9 +34,7 @@ PRODUCT_PACKAGES += \
     gralloc.kovsky \
     lights.kovsky \
     libhtc_acoustic \
-    libhtcgeneric-ril \
-    wl1251.ko \
-    wl1251_sdio.ko
+    libhtcgeneric-ril
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -78,15 +76,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     keyguard.no_require_sim=true \
+    ro.telephony.default_network=1 \
     ro.ril.hsxpa=2 \
     ro.ril.gprsclass=10 \
     mobiledata.interfaces=gprs,ppp0 \
-    ro.media.dec.jpeg.memcap=10000000 \
     ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
-    ro.setupwizard.enable_bypass=1 \
-    ro.media.dec.aud.wma.enabled=1 \
-    ro.media.dec.vid.wmv.enabled=1
+    ro.setupwizard.enable_bypass=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtcgeneric-ril.so \
@@ -104,23 +100,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     ro.sf.hwrotation=180
 
-# Default network type
-# 0 => WCDMA Preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_network=1
-
-# Disable JIT by default
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.execution-mode=int:fast
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.heapsize=32m\
+    dalvik.vm.dexopt-flags=m=y
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65536
-
-# Increase default VM heap size to prevent certain apps from crashing
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
+    ro.opengles.version=65536 \
+    debug.sf.hw=1
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \

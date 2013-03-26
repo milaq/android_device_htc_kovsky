@@ -1,0 +1,30 @@
+#
+# system.prop for kovsky
+#
+
+windowsmgr.max_events_per_sec=60
+
+persist.sys.scrollingcache=2
+persist.sys.use_dithering=1
+persist.sys.purgeable_assets=1
+ro.compcache.default=0
+
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+
+ro.media.dec.jpeg.memcap=20000000
+
+ro.media.enc.file.format       = 3gp,mp4
+ro.media.enc.vid.codec         = m4v,h263
+ro.media.enc.vid.h263.width    = 176,352
+ro.media.enc.vid.h263.height   = 144,288
+ro.media.enc.vid.h263.bps      = 64000,800000
+ro.media.enc.vid.h263.fps      = 1,30
+ro.media.enc.vid.m4v.width     = 176,352
+ro.media.enc.vid.m4v.height    = 144,288
+ro.media.enc.vid.m4v.bps       = 64000,800000
+ro.media.enc.vid.m4v.fps       = 1,30
+ro.media.dec.aud.wma.enabled   = 1
+ro.media.dec.vid.wmv.enabled   = 1
