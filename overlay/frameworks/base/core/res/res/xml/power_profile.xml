@@ -32,27 +32,39 @@
   <item name="dsp.video">100</item>
   <item name="radio.active">230</item>
   <item name="gps.on">120</item>
+  <item name="battery.capacity">1500</item>
+  <item name="radio.scanning">60</item>
   <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
-      <value>90</value>
+      <value>3</value>
       <value>3</value>
   </array>
   <array name="cpu.speeds">
-      <value>19200</value>
-      <value>122880</value>
       <value>128000</value>
+      <value>176000</value>
       <value>245760</value>
       <value>384000</value>
-      <value>528000</value>
+      <value>528400</value>
+      <value>576000</value>
+      <value>614400</value>
+      <value>633600</value>
+      <value>652800</value>
+      <value>672000</value>
+      <value>691200</value> 
   </array>
   <!-- Power consumption when CPU is idle -->
-  <item name="cpu.idle">1.7</item>
+  <item name="cpu.idle">2.2</item>
   <!-- Power consumption at different speeds -->
   <array name="cpu.active">
-      <value>0</value>
-      <value>0</value>
-      <value>0</value>
-      <value>45</value>
-      <value>100</value>
-      <value>140</value>
+      <value>38.1</value>
+      <value>45.6</value>
+      <value>62.5</value>
+      <value>80.6</value>
+      <value>98.9</value>
+      <value>105.5</value>
+      <value>111.5</value>
+      <value>117.3</value>
+      <value>123.6</value>
+      <value>134.5</value>
+      <value>139.2</value>
   </array>
 </device>
