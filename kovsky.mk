@@ -53,6 +53,7 @@ PRODUCT_COPY_FILES += \
     device/htc/kovsky/init.kovsky.rc:root/init.kovsky.rc \
     device/htc/kovsky/ueventd.kovsky.rc:root/ueventd.kovsky.rc \
     device/htc/kovsky/configs/vold.fstab:system/etc/vold.fstab \
+    device/htc/kovsky/initlogo.rle:root/initlogo.rle \
     device/htc/kovsky/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # Some init scripts
