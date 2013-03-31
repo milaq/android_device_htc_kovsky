@@ -87,6 +87,7 @@ BOARD_GPS_LIBRARIES := gps.kovsky
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/htc/kovsky/releasetools/kovsky_ota_from_target_files
+TARGET_CUSTOM_RELEASETOOL := device/htc/kovsky/releasetools/squisher
 
 TARGET_BOOTLOADER_BOARD_NAME := kovsky
 TARGET_OTA_ASSERT_DEVICE := kovsky
