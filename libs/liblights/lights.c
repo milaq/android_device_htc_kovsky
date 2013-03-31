@@ -112,9 +112,9 @@ static int rgb_to_brightness(struct light_state_t const* state)
 static int set_light_buttons (struct light_device_t* dev,
 		struct light_state_t const* state) {
 	int err = 0;
-	int brightness = rgb_to_brightness(state);
+	int on = is_lit(state);
 	pthread_mutex_lock (&g_lock);
-	err = write_int (BUTTON_FILE, brightness);
+	err = write_int (BUTTON_FILE, on?255:0);
 	pthread_mutex_unlock (&g_lock);
 	return err;
 }
@@ -126,13 +126,8 @@ static int set_light_backlight(struct light_device_t* dev,
 	LOGV("%s - brightness=%d color=0x%08x autobrightness=%i",
 		__func__, brightness, state->color, state->brightnessMode);
 	pthread_mutex_lock(&g_lock);
-	err = write_int(LCD_AUTO_FILE, state->brightnessMode);
 	g_backlight = brightness;
-	if (!state->brightnessMode) {
-		err = write_int(LCD_BACKLIGHT_FILE, brightness);
-	} else if (!brightness) {
-		err = write_int(LCD_BACKLIGHT_FILE, 0);
-	}
+	err = write_int(LCD_AUTO_FILE, state->brightnessMode);
 	err = write_int(LCD_BACKLIGHT_FILE, brightness);
 	pthread_mutex_unlock(&g_lock);
 	return err;
@@ -142,9 +137,9 @@ static int set_light_keyboard(struct light_device_t* dev,
 		struct light_state_t const* state)
 {
 	int err = 0;
-	int brightness = rgb_to_brightness(state);
+	int on = is_lit(state);
 	pthread_mutex_lock(&g_lock);
-	err = write_int(KEYBOARD_FILE, brightness);
+	err = write_int(KEYBOARD_FILE, on?255:0);
 	pthread_mutex_unlock(&g_lock);
 	return err;
 }
