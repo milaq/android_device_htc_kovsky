@@ -81,7 +81,10 @@ cd $REPACK/ota
 printf "Unpacking $OTAPACKAGE..."
 unzip $QUIET $OTAPACKAGE
 
-# leo apps removal
+# kovsky specific stuff
+echo
+printf "let's use better fonts (roboto)"
+cp $ANDROID_BUILD_TOP/device/htc/kovsky/prebuilt/fonts/* $REPACK/ota/system/fonts/
 echo
 printf "kovsky doesn't need rom manager, remove it."
 cd $REPACK/ota/system/app
