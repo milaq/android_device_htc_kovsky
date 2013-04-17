@@ -74,28 +74,19 @@ PRODUCT_COPY_FILES += \
     device/htc/kovsky/configs/acoustic/AudioPara3.csv:system/etc/AudioPara3.csv \
     device/htc/kovsky/configs/acoustic/AudioPreProcessTable.csv:system/etc/AudioPreProcessTable.csv
 
+# ril
 PRODUCT_PROPERTY_OVERRIDES := \
-    keyguard.no_require_sim=true \
-    ro.telephony.default_network=1 \
     ro.ril.hsxpa=2 \
     ro.ril.gprsclass=10 \
     mobiledata.interfaces=gprs,ppp0 \
-    ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1 \
-    ro.setupwizard.enable_bypass=1
+    rild.libpath=/system/lib/libhtcgeneric-ril.so
 
+# wifi
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libhtcgeneric-ril.so \
-    wifi.interface=wlan0
-
-# Time between scans in seconds. Keep it high to minimize battery drain.
-# This only affects the case in which there are remembered access points,
-# but none are in range.
-PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=30
 
-# density in DPI of the LCD of this board. This is used to scale the UI
-# appropriately. If this property is not defined, the default value is 160 dpi. 
+# display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     ro.sf.hwrotation=180
@@ -105,8 +96,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m\
     dalvik.vm.dexopt-flags=m=y
 
-# The OpenGL ES API level that is natively supported by this device.
-# This is a 16.16 fixed point number
+# gl
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=65536 \
     debug.sf.hw=1
