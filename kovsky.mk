@@ -77,6 +77,7 @@ PRODUCT_COPY_FILES += \
 # ril
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.ril.hsxpa=2 \
+    ro.ril.def.agps.mode=2 \
     ro.ril.gprsclass=10 \
     mobiledata.interfaces=gprs,ppp0 \
     rild.libpath=/system/lib/libhtcgeneric-ril.so
