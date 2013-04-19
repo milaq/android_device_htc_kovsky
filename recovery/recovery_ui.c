@@ -20,8 +20,8 @@
 #include "common.h"
 #include "extendedcommands.h"
 
-char* MENU_HEADERS[] = { "silver right & OK = back",
-			"silver left & center = select",
+char* MENU_HEADERS[] = { "silver left & OK = back",
+			"silver right & center = select",
 			" ",
 			NULL };
 
