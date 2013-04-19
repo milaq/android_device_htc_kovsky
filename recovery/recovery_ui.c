@@ -20,8 +20,8 @@
 #include "common.h"
 #include "extendedcommands.h"
 
-char* MENU_HEADERS[] = { "silver left & OK = back",
-			"silver right & center = select",
+char* MENU_HEADERS[] = { "silver left, OK, left = back",
+			"silver right, center, right  = select",
 			" ",
 			NULL };
 
@@ -78,10 +78,12 @@ int device_handle_key(int key_code, int visible) {
 
             case KEY_ENTER:
             case KEY_F1:
+            case KEY_RIGHT:
                 return SELECT_ITEM;
 
             case KEY_SEARCH:
             case KEY_BACK:
+            case KEY_LEFT:
                 if (ui_get_showing_back_button()) {
                     return SELECT_ITEM;
                 }
