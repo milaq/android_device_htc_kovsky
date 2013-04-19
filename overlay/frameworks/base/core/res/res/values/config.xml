@@ -142,5 +142,8 @@
     <string-array translatable="false" name="config_tether_upstream_regexs">
         <item>"ppp\\d"</item>
     </string-array>
-
+    
+    <!-- Display low battery warning when battery level dips to this value -->
+    <integer name="config_lowBatteryWarningLevel">14</integer>
+    
 </resources>
