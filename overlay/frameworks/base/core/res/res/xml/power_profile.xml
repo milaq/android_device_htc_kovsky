@@ -39,6 +39,7 @@
       <value>3</value>
   </array>
   <array name="cpu.speeds">
+      <value>19000</value>
       <value>128000</value>
       <value>176000</value>
       <value>245760</value>
@@ -47,14 +48,13 @@
       <value>576000</value>
       <value>614400</value>
       <value>633600</value>
-      <value>652800</value>
-      <value>672000</value>
-      <value>691200</value> 
+      <value>652800</value> 
   </array>
   <!-- Power consumption when CPU is idle -->
   <item name="cpu.idle">2.2</item>
   <!-- Power consumption at different speeds -->
   <array name="cpu.active">
+      <value>25.0</value>
       <value>38.1</value>
       <value>45.6</value>
       <value>62.5</value>
@@ -64,7 +64,5 @@
       <value>111.5</value>
       <value>117.3</value>
       <value>123.6</value>
-      <value>134.5</value>
-      <value>139.2</value>
   </array>
 </device>
