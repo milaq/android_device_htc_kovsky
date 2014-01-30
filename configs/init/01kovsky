@@ -1,16 +1,7 @@
 #!/system/bin/sh
 
-#some hacks to make the device more or less usable until
-#it is implemented properly
-
-if [ -d /system/lib/modules ] ;then
-	for i in /system/lib/modules/*.ko
-	do insmod $i
-	done
-fi
-
 # we need to force the wl1251 driver to disable transmitter power
-busybox ifconfig wlan0 up
-busybox ifconfig wlan0 down
+ifconfig wlan0 up
+ifconfig wlan0 down
 echo 0 > /sys/class/rfkill/rfkill0/state
 echo 0 > /sys/class/rfkill/rfkill1/state

@@ -24,7 +24,6 @@ DEVICE_PACKAGE_OVERLAYS := device/htc/kovsky/overlay
 PRODUCT_LOCALES += hdpi
 
 PRODUCT_PACKAGES += \
-    VoiceDialer \
     sensors.msm7k \
     microp-keypad.kcm \
     vold.fstab \
@@ -94,7 +93,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwrotation=180
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=32m\
     dalvik.vm.dexopt-flags=m=y
 
