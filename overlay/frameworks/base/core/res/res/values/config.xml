@@ -79,7 +79,7 @@
     </integer-array>
     
     <!-- Disable menu hard key in non-pattern lockscreen -->
-    <bool name="config_disableMenuKeyInLockScreen">true</bool>
+    <bool name="config_disableMenuKeyInLockScreen">false</bool>
     
     <!-- The 2d accelerator can't do an alpha transformation of
          a surface with an alpha channel, so enable this special mode
